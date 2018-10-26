@@ -23,10 +23,10 @@ MonoBehaviour:
     limits: 9001000020030000b004000040060000d007000060090000f00a0000800c0000100e0000a00f000030110000c012000050140000e015000070170000
   maskMethod: 2
   layers:
-  - name: Layer 1
+  - name: Default
     layers:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 1
   - name: Layer 2
     layers:
       serializedVersion: 2
@@ -40,10 +40,14 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 0
   passes:
+  - vector: {x: 1, y: 0, z: 0, w: 0}
+    layers:
+      serializedVersion: 2
+      m_Bits: 1
   - vector: {x: 0, y: 0, z: 0, w: 0}
     layers:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 4294967294
   replacement: 0
   materials: []
   materialQueues: 

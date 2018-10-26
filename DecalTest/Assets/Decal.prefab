@@ -57,13 +57,13 @@ MonoBehaviour:
   - name: Albedo
     nameID: 84
     type: 0
-    color: {r: 1, g: 0, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     value: 0
     enabled: 0
-  tiling: {x: 1, y: 1}
+  tiling: {x: 0.25, y: 1}
   offset: {x: 0, y: 0}
-  maskMethod: 0
-  masks: 00000000
+  maskMethod: 1
+  masks: 01000000
   _TilingOffset: 296
   _MaskBase: 297
   _MaskLayers: 298
@@ -81,3 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 0.5
   fullSize: 0
+  splatTextures:
+  - {fileID: 2800000, guid: 9e68120dfcaf3d24186328685b8d4a66, type: 3}
+  - {fileID: 2800000, guid: 77dd7bda966c69541b083e6fc8d022e4, type: 3}
