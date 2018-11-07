@@ -16,18 +16,18 @@ MonoBehaviour:
   forceForward: 0
   priority: 0
   transparencyType: 0
-  cutoff: 0.01
+  cutoff: 0.207
   tiling: {x: 0, y: 0}
   offset: {x: 0, y: 0}
   maskMethod: 0
   masks: 00000000
   projectionLimit: 80
-  _Cutoff: 5
-  _TilingOffset: 282
-  _MaskBase: 283
-  _MaskLayers: 284
+  _Cutoff: 78
+  _TilingOffset: 300
+  _MaskBase: 301
+  _MaskLayers: 302
   albedo:
     texture: {fileID: 2800000, guid: 018bd3dd5ce30124ab714e3a52e764fe, type: 3}
-    color: {r: 0.41911763, g: 0.31125647, b: 0.31125647, a: 0.041}
-    _MainTex: 1
-    _Color: 10
+    color: {r: 0.41911763, g: 0.31125647, b: 0.31125647, a: 1}
+    _MainTex: 8
+    _Color: 84

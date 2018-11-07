@@ -20,7 +20,7 @@ public class Splatter : MonoBehaviour {
 
     private void Update() {
         if (size < 1) {
-            size = Mathf.Min(1, size + Time.deltaTime * 15f);
+            size = Mathf.Min(1, size + Time.deltaTime * 13f);
             transform.localScale = Vector3.one * size * fullSize;
         } else {
             Destroy(this);

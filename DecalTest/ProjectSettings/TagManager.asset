@@ -16,7 +16,7 @@ TagManager:
   - ScreenRenderPlane
   - DontCollideWithPlayer
   - Player
-  - 
+  - PlayerBlocker
   - 
   - 
   - 

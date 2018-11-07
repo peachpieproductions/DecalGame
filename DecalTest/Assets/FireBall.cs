@@ -11,6 +11,8 @@ public class FireBall : MonoBehaviour {
     bool crouched;
     CapsuleCollider capsuleCollider;
     public float currentHue;
+    public float shootInterval = .5f;
+    float shootTimer;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -32,8 +34,15 @@ public class FireBall : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) UnityEditor.EditorApplication.isPlaying = false;
 
         if (Input.GetMouseButtonDown(0)) {
-            var inst = Instantiate(ball, transform.position + cam.forward * .5f, Quaternion.identity);
-            inst.GetComponent<Rigidbody>().velocity = cam.forward * 15;
+            shootTimer = 0;
+        }
+        if (Input.GetMouseButton(0)) {
+            if (shootTimer > 0) shootTimer -= Time.deltaTime;
+            else {
+                var inst = Instantiate(ball, transform.position + cam.forward * .5f, Quaternion.identity);
+                inst.GetComponent<Rigidbody>().velocity = cam.forward * 15;
+                shootTimer = shootInterval;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {

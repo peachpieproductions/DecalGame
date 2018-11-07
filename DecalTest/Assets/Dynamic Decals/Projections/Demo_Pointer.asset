@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Demo_Pointer
   m_EditorClassIdentifier: 
   type: 1
-  instanced: 0
+  instanced: 1
   forceForward: 0
   priority: 34
   transparencyType: 0
@@ -22,12 +22,12 @@ MonoBehaviour:
   maskMethod: 0
   masks: 00000000
   projectionLimit: 80
-  _Cutoff: 5
-  _TilingOffset: 282
-  _MaskBase: 283
-  _MaskLayers: 284
+  _Cutoff: 78
+  _TilingOffset: 300
+  _MaskBase: 301
+  _MaskLayers: 302
   albedo:
     texture: {fileID: 0}
     color: {r: 1, g: 0.83823526, b: 0.83823526, a: 1}
-    _MainTex: 1
-    _Color: 10
+    _MainTex: 8
+    _Color: 84

@@ -23,9 +23,9 @@ MonoBehaviour:
   masks: 00000000
   projectionLimit: 120
   _Cutoff: 78
-  _TilingOffset: 296
-  _MaskBase: 297
-  _MaskLayers: 298
+  _TilingOffset: 300
+  _MaskBase: 301
+  _MaskLayers: 302
   albedo:
     texture: {fileID: 2800000, guid: ead84f65253041048861cfbad00e770e, type: 3}
     color: {r: 0.1397059, g: 0, b: 0, a: 1}
@@ -35,17 +35,17 @@ MonoBehaviour:
     texture: {fileID: 0}
     metallicity: 1
     glossiness: 0.004
-    _MetallicGlossMap: 252
-    _Metallic: 261
-    _Glossiness: 258
+    _MetallicGlossMap: 206
+    _Metallic: 215
+    _Glossiness: 213
   normal:
     texture: {fileID: 2800000, guid: b66c2383353dc7d46a137424b18f24ee, type: 3}
     strength: 0.4
     _BumpMap: 80
-    _BumpScale: 255
+    _BumpScale: 210
   emissive:
     texture: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     intensity: 1
-    _EmissionMap: 251
+    _EmissionMap: 205
     _EmissionColor: 59
