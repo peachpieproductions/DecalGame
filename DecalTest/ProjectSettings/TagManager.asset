@@ -17,7 +17,7 @@ TagManager:
   - DontCollideWithPlayer
   - Player
   - PlayerBlocker
-  - 
+  - PostProcessing
   - 
   - 
   - 
