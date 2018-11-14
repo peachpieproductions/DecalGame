@@ -28,14 +28,20 @@ public class Player : MonoBehaviour {
         if (currentHue >= 1) currentHue = 0;
     }
 
+    public void Die() {
+        rb.velocity = Vector3.zero;
+        transform.position = new Vector3(0, 50, 0);
+        transform.eulerAngles = new Vector3(0, 180, 0);
+        cam.localEulerAngles = Vector3.zero;
+    }
+
     private void Update() {
 
         if (Input.GetKeyDown(KeyCode.Escape)) UnityEditor.EditorApplication.isPlaying = false;
 
         //Kill Y
         if (transform.position.y < -60) {
-            rb.velocity = Vector3.zero;
-            transform.position = new Vector3(0, 50, 0);
+            Die();
         }
 
         if (Input.GetMouseButtonDown(0)) {
