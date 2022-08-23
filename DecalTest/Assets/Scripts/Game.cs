@@ -5,7 +5,7 @@ using UnityEngine;
 public class Game : MonoBehaviour {
 
     public static Game inst;
-    public Transform player;
+    public Player player;
     public GameObject hub;
     public bool hubActive;
     public Level[] levels;

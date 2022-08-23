@@ -13,6 +13,11 @@ public class Player : MonoBehaviour {
     public float shootInterval = .5f;
     float shootTimer;
 
+    /*
+    public int[] song; //TEMPORARY - FIX
+    public int songPos; //TEMPORARY - FIX
+    */
+
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
@@ -53,6 +58,11 @@ public class Player : MonoBehaviour {
                 var inst = Instantiate(ball, transform.position + cam.forward * .5f, Quaternion.identity);
                 inst.GetComponent<Rigidbody>().velocity = cam.forward * 15;
                 shootTimer = shootInterval;
+
+                /*GetComponent<AudioSource>().pitch = Mathf.Pow(1.05946f, song[songPos]); //TEMPORARY - FIX
+                GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip); //TEMPORARY - FIX
+                songPos++; if (songPos == song.Length) songPos = 0; //TEMPORARY - FIX
+                */
             }
         }
 

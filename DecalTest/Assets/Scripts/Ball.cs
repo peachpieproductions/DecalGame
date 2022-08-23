@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
     Rigidbody rb;
     public GameObject spawn;
     public bool rainbow;
+    public bool grey;
     Vector3 flyingVel;
     bool spawned;
     float hue;
@@ -34,9 +35,15 @@ public class Ball : MonoBehaviour {
             inst.transform.localScale *= Random.Range(1, 1.5f);
             inst.transform.Rotate(0, 0, Random.Range(0, 359));
             if (rainbow) {
-                FindObjectOfType<Player>().CycleColor();
+                Game.inst.player.CycleColor();
                 var col = new Color();
                 col = Color.HSVToRGB(hue, .6f, 1f);
+                inst.GetComponent<ProjectionRenderer>().SetColor(0, col);
+                inst.GetComponent<ProjectionRenderer>().UpdateProperties();
+            }
+            if (grey) {
+                var col = new Color();
+                col = Color.HSVToRGB(0f, 0f, Random.Range(.4f,1f));
                 inst.GetComponent<ProjectionRenderer>().SetColor(0, col);
                 inst.GetComponent<ProjectionRenderer>().UpdateProperties();
             }

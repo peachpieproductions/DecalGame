@@ -7,6 +7,7 @@ public class Creature : MonoBehaviour {
 
     public Transform[] waypoints;
     public Light redLight;
+    public Transform eyeLocator;
     bool canSeePlayer;
     bool triggered;
     int currentWaypoint;
@@ -24,7 +25,7 @@ public class Creature : MonoBehaviour {
             if (!canSeePlayer) {
                 ToggleTriggeredState(false);
             } else {
-                if (Vector3.Distance(transform.position,Game.inst.player.position) < 3) {
+                if (Vector3.Distance(transform.position,Game.inst.player.transform.position) < 3) {
                     Game.inst.player.GetComponent<Player>().Die();
                 }
             }
@@ -60,12 +61,12 @@ public class Creature : MonoBehaviour {
     IEnumerator CheckPlayerVisibility() {
 
         while (true) {
-            //Debug.DrawRay(transform.position + transform.forward, (Game.inst.player.position - (transform.position + transform.forward)).normalized * 12f, Color.red, .25f);
+            //Debug.DrawRay(eyeLocator.position, (Game.inst.player.transform.position - (eyeLocator.position)).normalized * 12f, Color.red, .25f);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position + transform.forward, Game.inst.player.position - (transform.position + transform.forward), out hit, 12f)) {
-                if (hit.transform.CompareTag("Player") && Vector3.Angle(transform.forward, Game.inst.player.position - (transform.position + transform.forward)) < 75) {
+            if (Physics.Raycast(eyeLocator.position, Game.inst.player.transform.position - (eyeLocator.position), out hit, 12f)) {
+                if (hit.transform.CompareTag("Player") && Vector3.Angle(transform.forward, Game.inst.player.transform.position - (eyeLocator.position)) < 75) {
                     canSeePlayer = true;
-                    agent.SetDestination(Game.inst.player.position);
+                    agent.SetDestination(Game.inst.player.transform.position);
                 } else canSeePlayer = false;
             } else canSeePlayer = false;
 
